@@ -1,0 +1,55 @@
+
+/*Fonts Poppins (400, 500, 600) and Roboto 400*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto&display=swap');
+
+/*Main styles*/
+body{
+    margin: 0;
+    padding: 0;
+    background: #1e252b;
+}
+body *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Logo */
+header{
+    max-width: 1225px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 31px 0 0 0;
+}
+header .logo_block{
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+header .logo_block .logo-icon{
+    font-size: 19px;
+    height: 38px;
+    display: flex;
+    width: 38px;
+    background-color: #FF6E30;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+header .logo-name{
+    padding: 0 0 0 12px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.nav-list_item a *{
+    color: #fff;
+}
+
