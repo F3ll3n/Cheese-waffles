@@ -15,7 +15,7 @@ body *{
     font-family: 'Poppins', sans-serif;
 }
 .wrapper{
-    max-width: 1440px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
@@ -25,31 +25,175 @@ header{
     max-width: 1225px;
     width: 100%;
     margin: 0 auto;
-    padding: 31px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
 }
 header .logo_block{
-    height: 38px;
+   
     display: flex;
+    
     align-items: center;
 }
-header .logo_block .logo-icon{
-    font-size: 19px;
-    height: 38px;
-    display: flex;
-    width: 38px;
-    background-color: #FF6E30;
-    border-radius: 8px;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
+
+header .logo_block .icon-waffles{
+    width: 80px;
+}
+header .logo_block .logo-name_bottom-text{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: #bebebe;
 }
 header .logo-name{
-    padding: 0 0 0 12px;
     font-size: 22px;
+    line-height: 29px;
+    font-weight: 600;
+   
+    color: #ffffff;
+}
+nav{
+    max-width: 500px;
+    width: 100%;
+}
+.nav-list{
+    display: flex;
+   
+    justify-content: space-between;
+}
+.nav-list li{
+    list-style: none;
+}
+.nav-list_item a{
+    color: #fff;
+    text-decoration: none;
+}
+.nav-list_item a::after{
+    content: '';
+    display: block;
+    height: 2px;
+    transition: 0.3s;
+}
+.nav-list_item a:hover::after{
+    content: '';
+    display: block;
+    border-bottom: 0px solid white;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+.nav-list li:last-child a{
+    color: #EA8C4F;
+}
+.nav-list li:last-child a:hover::after{
+    background-color: #EA8C4F;
+}
+.nav-list li:last-child{
+    position: relative;
+}
+.nav-list li:last-child .inner-item_list{
+    position: absolute;
+    top: 100%;
+    transition: .3s;
+    padding: 0px;
+    border-radius: 4px;
+    background-color: rgba(29, 35, 41, 0.8);
+    width: 200px;
+    font-size: 0px;
+    opacity: 0;
+}
+.nav-list li:hover:last-child .inner-item_list li{
+    padding: 10px;
+}
+
+.nav-list li:hover:last-child .inner-item_list{
+    opacity: 1;
+    display: block;
+    font-size: 16px;
+}
+.login button{
+    width: 118px;
+    height: 48px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 600;
+    background-color: inherit;
+    color: #fff;
+    transition: .3s;
+}
+.login button:hover{
+    background-color:#FF6E30;
+    cursor: pointer;
+}
+.main-bnr_wrap{
+    padding: 60px 0 0 0;
+    display: flex;
+}
+.main-bnr_wrap h1{
+    font-size: 40px;
     font-weight: 600;
     color: #ffffff;
 }
-.nav-list_item a *{
-    color: #fff;
+.main-left{
+    width: 50%;
 }
-
+.main-right{
+    width: 50%;
+}
+.waffle-bnr{
+    max-width: 600px;
+    width: 100%;
+}
+.cheese{
+    padding-top: 20px;
+    background-color: #1d2329;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+@media (max-width: 1100px) {
+    .main-bnr_wrap{
+        display: block;
+        margin: 0 auto;
+        max-width: 1000px;
+        width: 100%;
+        text-align: center;
+    }
+    .main-left{
+        margin: 0 auto;
+        display: flex;
+        width: 100%;
+        max-width: 700px;
+        justify-content: space-around;
+    }
+    .main-right{
+        padding: 10px 0 0 0;
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+    .main-right .waffle-bnr{
+        max-width: 800px;
+        padding: 40px 10% 0 10%;
+    }
+    .main-left h1{
+        max-width: 600px;
+        
+    }
+    .login{
+        margin: 0 0 0 10px;
+    }
+    nav{
+        padding: 0 0 0 10px;
+    }
+}
+@media (max-width: 900px){
+    nav{
+        display: none;
+    }
+    .cheese{
+        display: none;
+    }
+}
